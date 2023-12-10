@@ -11,8 +11,11 @@ def print_matrix(a):
 def flatten(range_r):
     res = []
     for i in range_r:
-        for j in i:
-            res.append(j)
+        if isinstance(i, int):
+            res.append(i)
+        else:
+            for j in i:
+                res.append(j)
     return res
 
 
